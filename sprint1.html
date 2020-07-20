@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>
         Sprint 1
     </h1>
     <p>
         <a href="/index.html">
-        HOME</a>
+            HOME</a>
     </p>
     <h3>
         A vállalati webfejlesztés alapjai - A fejlesztői környezet kialakítása
@@ -20,42 +22,128 @@
         A tanuláshoz használt programok:
     </p>
     <p>
-        <h3>Visual Studio Code:</h3> A Microsoft által fejlesztett IDE (Integrated Development Environment). Kiváló támogatást nyújt a Webes fejlesztésekhez, ingyenes és több ezer kiegészítő érhető el hozzá. Live Server Extensions-t használjuk
+    <h3>Visual Studio Code:</h3> A Microsoft által fejlesztett IDE (Integrated Development Environment). Kiváló
+    támogatást nyújt a Webes fejlesztésekhez, ingyenes és több ezer kiegészítő érhető el hozzá. Live Server Extensions-t
+    használjuk
     </p>
     <p>
         <a target="blank" href="/img/sprint1and2/vscshortcuts.jpg">
-        Gyorsbillentyűk</a>
+            Gyorsbillentyűk</a>
     </p>
     <p>
-        <h3>Git:</h3> A Git verziókezelő rendszert Linus Torwalds, a Linux atyja fejlesztette ki. A cél az volt, hogy akár több ezren is zökkenőmentesen tudjanak együtt dolgozni ugyanazon a programon. Mára már ez lett a közös munka egyik alapköve.
+    <h3>Git:</h3> A Git verziókezelő rendszert Linus Torwalds, a Linux atyja fejlesztette ki. A cél az volt, hogy akár
+    több ezren is zökkenőmentesen tudjanak együtt dolgozni ugyanazon a programon. Mára már ez lett a közös munka egyik
+    alapköve.
     </p>
     <p>
         <a target="blank" href="/img/sprint1and2/gitcommands.jpg">
-        Git parancsok</a>
+            Git parancsok</a>
     </p>
     <p>
-        <h3>Node.js:</h3> Arra való, hogy programokat tudj futtatni Windowson vagy Linuxon, amiket JavaScript nyelven írtál. Erre régebben nem volt lehetőség, az ilyen kódokat csak a böngészőben lehetett futtatni.
+    <h3>Node.js:</h3> Arra való, hogy programokat tudj futtatni Windowson vagy Linuxon, amiket JavaScript nyelven írtál.
+    Erre régebben nem volt lehetőség, az ilyen kódokat csak a böngészőben lehetett futtatni.
     </p>
     <p>
-        <h3>Githb:</h3> A GitHub egy ingyenes Git szerver. Ide tudják az együtt dolgozó kollégák feltölteni a módosításaikat, és a GitHubon keresztül szinkronizálni a munkájukat.
+    <h3>Githb:</h3> A GitHub egy ingyenes Git szerver. Ide tudják az együtt dolgozó kollégák feltölteni a
+    módosításaikat, és a GitHubon keresztül szinkronizálni a munkájukat.
     </p>
     <p>
-        <h3>Egy GitHub repository klónozása</h3>
+    <h3>Egy GitHub repository klónozása</h3>
     </p>
     <p>
-        Mi az a klónozás? Az a művelet, amikor egy meglévő Git repository tartalmát letöltöm a gépemre, és beállítom, hogy a Git figyelje a mappát.
+        Mi az a klónozás? Az a művelet, amikor egy meglévő Git repository tartalmát letöltöm a gépemre, és beállítom,
+        hogy a Git figyelje a mappát.
     </p>
     <p>A klónozás lépései:
-        <ol>
-            <li>A klónozható url kimásolása a GitHub oldaláról.</li>
-            <li>Parancssor nyitása a sajátgépen.</li>
-            <li>Betallózás a kívánt könyvtárba.</li>
-            <li>Klón parancs: git clone repo_url</li>
-            <li>Létrejön az új mappa, a neve megegyezik a repo nevével.</li>
-        </ol>
+    <ol>
+        <li>A klónozható url kimásolása a GitHub oldaláról.</li>
+        <li>Parancssor nyitása a sajátgépen.</li>
+        <li>Betallózás a kívánt könyvtárba.</li>
+        <li>Klón parancs: git clone repo_url</li>
+        <li>Létrejön az új mappa, a neve megegyezik a repo nevével.</li>
+    </ol>
     </p>
     <p>
-        <h3>Forkolás</h3>
+    <h3>Forkolás</h3>
+    </p>
+    <p>A forkolás nagyon hasonló a klónozáshoz, csak itt nem én hozom létre a kezdő tartalmat. Valaki másnak kiválasztom
+        a repoját, majd egyszerűen rányomok a Fork gombra.
+    </p>
+    <p>Így létrejön egy új repo a saját nevem alatt, de az eredeti repo tartalmával. Innen már én fejlesztem tovább az
+        alkalmazásomat, a módosításaim nem lesznek hatással az eredeti, forkolt repora.
+    </p>
+    <p>
+    <h3>Git - fájlok állapotai</h3>
+    </p>
+    <p>
+        Egy fájl négy állapotban lehet a gépünkön:
+    <ol>
+        <li>Untracked: a Git nem törődik a fájllal. Ez újonnan létrehozott fájloknál jellemző.</li>
+        <li>Unmodified: a Git követi a fájlt, és mi nem módosítottuk azt. Ez az újonnan letöltött fájlok állapota.</li>
+        <li>Modified: a Git követi a fájlt, és mi módosítottuk.</li>
+        <li>Staged: a Git követi a fájlt, mi módosítottuk, és a módosítás be fog kerülni az adatbázisba.</li>
+    </ol>
+    </p>
+    <p>Státuszváltások</p>
+    <img src="/img/sprint1and2/git_status.png">
+    <p>A git munkafolyamat tehát így néz ki új fájlok esetében:</p>
+    <ol>
+        <li>Létrehozunk egy új fájlt</li>
+        <li>git add parancssal hozzáadjuk a staging area-hoz</li>
+        <li>git commit paranccsal a staging area tartalmát hozzáadjuk az adatbázishoz</li>
+    </ol>
+    <p>Meglévőek esetében pedig így:</p>
+    <ol>
+        <li>Módosítjuk a fájlt</li>
+        <li>git add parancssal hozzáadjuk a staging area-hoz</li>
+        <li>git commit paranccsal a staging area tartalmát hozzáadjuk az adatbázishoz</li>
+    </ol>
+    <p>Dokumentáció
+    <ul>
+        <li>https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository</li>
+        <li>Lokálisan: git status --help</li>
+        <li>Lokálisan: git add --help</li>
+        <li>Lokálisan: git commit --help</li>
+    </ul>
+    </p>
+    <p>
+    <h3>Szinkronizálás</h3>
+    </p>
+    <p>Ismerjük a commit parancsot, amivel a változtatásainkat tudjuk véglegesíteni a helyi gépünkön. Ideje ezeket
+        feltölteni egy közös Git szerverre.
+    </p>
+    <p>
+    <h4>A közös munka alapját a következő három parancs jelenti:</h4>
+    <ul>
+        <li>Fetch - Mi történt mostanában?</li>
+        <li>A git fetch parancs megnézi, milyen változások történtek a szerveren. Ezeket a változásokat le is tölti, de
+            nem nyúl hozzá az aktuális munkánkhoz, a working directory nem változik a hatására. Ezáltal nyugodtan
+            kiadhatjuk bármikor a parancsot, nem lesz kellementlen mellékhatása.</li>
+        <li>Pull - Jöhet minden!</li>
+        <li>A git pull parancs letölti a változásokat a szerverről, és integrálja a saját munkánkba. Fontos különbség a
+            fetch parancshoz képest, hogy a pull nem egy biztonságos parancs, változni fog a mappánk tartalma, ha
+            kiadjuk. Mindig commitoljunk, mielőtt kiadnánk a pull parancsot!</li>
+        <li>Push - Megy a munkám!</li>
+        <li>A git push parancs feltölti a commitjainkat a szerverre. Jegyezzük meg, csak azok a változások mennek fel,
+            amiket commitoltunk! Mielőtt pusholni próbálnánk, kérjük el a szervertől a változásokat a pull paranccsal!
+        </li>
+    </ul>
+    </p>
+    <p>
+        Dokumentáció
+    <ul>
+        <li>https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes</li>
+        <li>Lokálisan: git fetch --help</li>
+        <li>Lokálisan: git pull --help</li>
+        <li>Lokálisan: git push --help</li>
+        <li>A kialakított fejlesztői környezet bemutatása</li>
+        <li>Kristóf ügyes volt, belőtte a fejlesztőkörnyeztet.</li>
+        <li>Remélem, a videók és leírások segítettk neked abban, hogy te is olyan légy mint Kristóf :)</li>
+    </ul>
+    </p>
+    <p>
+    <h3>Sprint 1 vége</h3>
     </p>
 </body>
+
 </html>
