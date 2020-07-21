@@ -1,17 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
+
 <body>
     <h1>
         Sprint 2
     </h1>
     <p>
         <a href="/index.html">
-        HOME</a>
+            HOME</a>
     </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <p>A vállalati webfejlesztés alapjai - Egy statikus HTML oldal készítése és publikálása</p>
+                <p>1. feladat - A weboldal vázának elkészítése</p>
+                <p>A webfejlesztési projekt megismerése - Hogyan születik egy feladat?</p>
+                <p>Ezzel a videóval már három szereplősre bővült a történetünk.
+                    Ma már egyre ritkábban találkozunk magányos farkasként tevékenykedő fejlesztőkkel. Egyre nagyobbak
+                    és
+                    egyre bonyolultabbak az alkalmazások, ezért szinte mindig csapatok dolgoznak rajtuk. Ha mégis
+                    egyedül
+                    dolgozik valaki, annak is az az oka, hogy egy kisebb részfeladatot lát el, amelyeket önállóan is le
+                    tud fejleszteni.</p>
+
+                <p>Tamás (Product Owner)
+                    Az ő feladata összefogni a munkát, közvetíteni a megrendelő és a fejlesztők között, felügyelni a
+                    teljes
+                    munkafolyamat haladását, határidőit.</p>
+                <p>Józsi (Lead Developer)
+                    A Tamástól kapott feladatokat részfeladatokra bontja, kiosztja az egyes fejlesztőknek, segíti a
+                    munkájukat. Rendszeresen konzultál Tamással.</p>
+                <p>Kristóf (Developer vagy Junior Developer)
+                    A kiosztott, jól körülhatárolható feladatokat ő végzi el, rendszeresen egyeztet Józsival, általában
+                    heti
+                    rendszerességgel. Ha kitartó lesz és szeretnék, pár év múlva belőle is vezető fejlesztő lehet. Majd
+                    meglátjuk :)</p>
+                <p>1. feladat - A weboldal vázának elkészítése</p>
+                <p>A feladat pontosítása
+                    Ha megfigyeled a videót, azt láthatod, hogy a feladat elhangzása után Kristóf rövid szondázó
+                    kérdésekkel
+                    pontosítja az elhangzottakat. Nem az a lényeg, hogy a vezető érti-e a feladatot, hanem hogy az értse
+                    aki
+                    el fogja készíteni. Ha valami nem egyértelmű, soha ne szégyelld megkérdezni.</p>
+                <p>A HTML nyelv áttekintése
+                    Itt csak röviden összefoglalom, hogy miről is lesz szó.</p>
+                <p>A HTML nyelv bemutatása
+                    HTML = Hyper Text Markup Language
+                    A HTML szabványt aránylag ritkán frissítik.
+                    Ennek előnye, hogy ha készítesz valamilyen webes alkalmazást, akkor azt akár évtizedek múlva is meg
+                    tudják nyitni egy böngészőben, mivel a szabvány visszafelé kompatibilis a legtöbb esetben.
+                    Csatolok egy összefoglalót, amin az összes ismert HTML elem megtalálható:</p>
+                <p>Egy HTML dokumentum felépítése
+                    HTML5 példaoldalak
+                    Sokféleképpen neki lehet állni egy weboldal készítésének, de mindenekelőtt szükséged lesz egy
+                    alapvető
+                    HTML vázra. Az allábiakban linkelek neked pár oldalt, ahol erre láthatsz példákat:
+                    https://codepen.io/cPenFrontEnd/pen/yyzQrK
+                    https://code-maven.com/html-skeleton
+                    https://html5bones.com/</p>
+                <p>Szövegformázó elemek - header
+                    A címsorok neve h (heading) betűvel kezdődik.
+                    A h1 a legnagyobb, utána csökkenő sorrendben egészen a h6-ig.
+                    Általában a tartalom tagolására használjuk őket. A Google és a többi kereső is kiemelten figyelmbe
+                    veszi
+                    őket, ha például a címsor szövege nincs összefüggésben az alatta található tartalommal, a keresők
+                    hátrébb sorolják az oldalt, úgymond büntetik.</p>
+                <p>Szövegformázó elemek - em, strong
+                    EM elem
+                    Az (em)) elem a tartalmát, hangsúlyozottan, kiemelt szövegként jeleníti meg.
+                    Tipp: Jelenleg is szabványos elem, de szebb hatást érhetsz el CSS használatával.
+                    STRONG elem
+                    The (strong)) elem is szövegek formázására való. Ez egy fontosabb szövegrészletet határoz meg.
+                    Tipp: Szintén igaz rá, hogy szebb hatást érhetsz el CSS használatával.
+                    Blokk és inline elemek</p>
+                Blokk szintű elemek
+                A blokk szintű elemek mindig új sorban kezdődnek, és akkor sem kerülnek másik elem mellé, ha
+                amúgy elférnének tőle. Azaz előttük utánuk sortörés van és általában nagyobb margóval
+                rendelkeznek, távolabb vannak a többi elemtől.
+                Inline elemek
+                Mivel minden elem ami nem blokk szintű inline, ezért ezeket külön nem sorolnám fel. Amit meg
+                kell róluk jegyezni, hogy sorban egymás mellé teszi őket a böngésző, egészen addig amíg
+                kiférnek. Ha már nem, akkor egy új sorban folytatja a megjelenítésüket.
+                Dokumentáció
+                Blokk szintű elemek felsorolása
+                Az elkészített weboldal váznak a bemutatása
+                Mit látunk a videón?
+                Amikor egy feladattal készen vagy, főleg kezdőként stresszes tud lenni a bemutatása. Ilyenkor
+                még bizonytalanabb az ember, ráadásul mindannyiunknak más a kritikatűrő képessége.
+                Azt szokták javasolni, hogy legyünk nyitottak a jobbító szándékú megjegyzésekre. A vezető is
+                volt kezdő, akinek be kell számolnunk a munkánkról. Nem az a célja, hogy magbántson minket,
+                hanem hogy a közös munka sikeres legyen. Ha ezeket az alapvető dolgokat mindkét részről
+                betartják, akár ilyen jó hangulatú is lehet egy demo, mint ahogy a videón látod.
+                2. feladat - A weboldal képeinek kihelyezése
+                2. feladat - A weboldal képeinek kihelyezése
+                Ahhoz, hogy Kristóf sikeresen elvégezze a feladatot, új ismeretekre lesz szüksége.
+                A képek kezelése mellett, nem árt ha tudja kezelni a Chrome DevTools-t, ahol le tudja
+                ellenőrizni a munkáját és megkeresheti az esetleges hibák forrását is.
+                A Chrome DevTools használata
+                Chrome DevTools
+                Megnyitás: F12
+                A Chrome DevTools segít neked abban, hogy át tudd tekinteni az alkalmazásod felépítését, vagy
+                mag tudd keresni a hibákat. Ha hibásan működik valami, semmiképp sem szabad megijedni. Meg kell
+                nyitni a megfelelő fejlesztőeszközt és megkeresni a hiba forrását. A hibákból mindig tanulunk
+                valamit, így azok hasznosak a számunkra.
+                A letöltéseknél megtalálod az alapvető panelek bemutatását:
+                Ismerkedés az URL fogalmával
+                URL - Uniform Resource Locator
+                A tartalmak az interneten bárhol lehetnek. Hogyan találjuk meg őket? Ehhez kell az URL, ha
+                ismerjük az adott oldal vagy kép vagy film vagy bámi URL-jét, akkor a böngészőbe beírva meg
+                tudod nézni vagy le tudod tölteni.
+                Fontos, hogy minden erőforrásnak legyen egyedi azonosítója. Erre való az URL.
+                Az URL részei
+                Egy példa: https://www.training360.com/tanfolyami-naptar
+                A https a használandó protokoll. A protokoll neve után kettőspont (:) írandó.
+                A training360.com a célgép tartományneve. Ez elé két perjel (//) írandó.
+                A 443 a célgép azon hálózati portszáma, amin kérésünket várja; ez elé kettőspont (:) írandó. Ezt
+                a részt gyakran teljesen elhagyhatjuk, például esetünkben a HTTPS protokoll alapértelmezett
+                portszáma a 443.
+                A /tanfolyami-naptar a kért elérési út a célgépen. Ez a rész mindig a perjellel (/) kezdődik.
+                Listák használata
+                Listák
+                Felsorolások megjelenítésére használhatod.
+                UL - Unordered List
+                Elem: <ul></ul>
+                Lista elemei: <li></li>
+                OL - Ordered List
+                Elem: <ol></ol>
+                Lista elemei: <li></li>
+                Dokumentáció
+                https://www.w3schools.com/tags/tag_ul.asp
+                https://www.w3schools.com/tags/tag_ol.asp
+                https://www.w3schools.com/tags/tag_dl.asp
+                Képek elhelyezése a weboldalon
+                Image elem
+                Elem: <img>
+                Képek megjelenítésére való. Self closed elem, azaz a végére nem kell másik </img> tag. Az src
+                attribútum adja meg, hogy honnan kerüljön a kép betöltésre.
+                A képek méretezése és alakítása már kicsit bonyolultabb dolog, amikor a CSS formázásokat
+                vesszük, majd kitérek rá.
+                Dokumentáció
+                https://www.w3schools.com/tags/tag_img.asp
+                Linkek elhelyezése a weboldalon
+                Anchor elem
+                Elem: <a></a>
+                Kötelező attribútumok:
+                href: az URL, ahová kattintás után jutsz.
+                Dokumentáció
+                https://www.w3schools.com/tags/tag_a.asp
+                Az egyes HTML elemek egymásba ágyazása
+                Az XML jellegű struktúrák lényege, hogy az elemeket egymásba lehet ágyazni. Így már beszélhetünk
+                szülő és gyermek elemekről, aszerint, hogy melyik elem melyikbe van beágyazva.
+                Dokumentáció:
+                https://www.w3schools.com/html/html_elements.asp
+                A képekkel kiegészített weboldal bemutatása
+                Kristóf ügyes volt, szépen halad a webfejlesztővé válás rögös, de izgalmas útján.
+                3. feladat - Az étlap elkészítése
+                3. feladat - Az étlap elkészítése
+                Az étlapot most táblázatos formában kell elkészítenie Kristófnak.
+                Lenne rá más megoldás is, de így legalább meg tudsz te is ismerkedni a táblázatokkal.
+                Táblázat készítése
+                Table elem
+                Elem: <table></table>
+                A táblázatokat strukturált adatokhoz használjuk. Vannak sorok, oszlopok, és általában ugyanazok
+                az adatok szerepelnek minden sorban.
+                Dokumentáció
+                https://www.w3schools.com/html/html_tables.asp
+                Egy táblázat részei
+                Egy táblázat olyan mint egy Excel tábla. Sorokból és oszlopokból áll, ezek találkozásánál vannak
+                az adatcellák. Mindegyikhez vannak külön HTML elemek:
+                Fejléc: <thead></thead>
+                Sor: <tr></tr>
+                Fejléc cella: <th></th>
+                Cella: <td></td>
+                Dokumentáció
+                https://www.w3schools.com/tags/tag_table.asp
+                Sorok és oszlopok összevonása
+                Rowspan és Colspan
+                A nevükből adódóan sorok és oszlopok összevönására valók. Ezek attribútumok, tehát nem önálló
+                elemek, hanem a td vagy a th elem tulajdonságai.
+                Dokumentáció
+                https://www.w3schools.com/tags/att_td_rowspan.asp
+                https://www.w3schools.com/tags/att_td_colspan.asp
+                Az elkészített oldal publikálása és megosztása
+                Publikálás
+                Ahhoz, hogy az emberek meg tudják nézni a webalkalmazásodat, szerverre van szükséged. Ha
+                ilyennel nem rendelkezel, használhatsz felhő szolgáltatást is, sok cég kínál ingyenes tárhelyet.
+                Mi a github pages nevűt használjuk a videóban, de lényeges különbség nincs közöttük abból a
+                szempontból, hogy fel kell tölteni a fájlokat és rájuk mutatni egy URL-lel, ezután az emberek
+                elérik az alkalmazást.
+                Dokumentáció
+                https://help.github.com/en/github/working-with-github-pages
+                Az étlappal bővített weboldal bemutatása
+                Kristóf már magabiztosan demózza a munkát.
+                Az elkészített weboldal átadása
+                Végül a dolgok visszatérnek oda, ahonnan indultak, Józsinak is be kell mutatni a projekt állását
+                Tamásnak.
+
+
+            </div>
+        </div>
 </body>
+
 </html>
