@@ -13,5 +13,274 @@
         <a href="/index.html">
         HOME</a>
     </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                A vállalati webfejlesztés alapjai - A CSS alapjai
+1. feladat - A weboldal szövegeinek formázása
+A megjelenítéssel kapcsolatos követelmények
+Nem elég, ha egy alkalmazás jól működik. Az appokat legtöbbször nem a profi működés, hanem a jó megjelenés adja el. Ez így van a mi projektünkkel is.
+1. feladat - A weboldal szövegeinek formázása
+Kristófnak új ismereteket kell elsajátítania.
+Az oldalak formázásához külön nyelvet használnak, CSS a neve.
+A CSS áttekintése
+CSS - Cascading Style Sheets (Kaszkádolt stíluslap)
+Ahhoz, hogy megértsük, milyen okból kifolyólag lett szükség a CSS-re, elég magának a HTML nyelvnek a történetét ismernünk. A HTML arra való, hogy egyszerű tartalmat tegyünk közzé a neten. Régen, amikor az internet nem volt ilyen széles körben elterjedt, csak kutatóintézetek, egyetemek használták, ezzel nem is volt probléma. Azonban ahogy az internet egyre nagyobb nyilvánosságot kapott, és ma már bárkinek lehet honlapja, egyre nagyobb lett az igény az oldalak egyedibbé/egyénibbé tételére.
+Emiatt az újabb HTML szabványokba egyre több és több olyan tulajdonságot tettek, melyek a formázásra, megjelenésre vonatkoztak. Idővel aztán a HTML fájlunk több formázó utasítást, mint taget tartalmazott. Ezáltal a kódunk mérete jócskán megnőtt, és átláthatatlanabb lett. Így felmerült az igény, hogy a tartalmi és a megjelenésre vonatkozó rész el legyen különítve egymástól. Ezért létrehozták a CSS szabványt. Az oldalunk tartalma maradt továbbra is a HTML fájlban, azonban minden formázást CSS segítségével valósítunk meg. (Lehetőleg, ha nem is kötelező jelleggel, de külön fájlban.)
+Tehát a CSS arra szolgál, hogy megadjuk weblapjaink stílusát, beleértve a designt, az elrendezést, a különböző médiákhoz igazodó megjelenítést. Stílus definiálható magában a HTML állományban, de lehet külső állományban is. Az utóbbit használva könnyebb áttekinteni, kezelni, és hasznos a közös munkánál is.
+Az Inline stílusok
+Inline CSS
+Attribútum: style
+Ahogy a nevük is mutatja, az inline stílusokat a sorban, a HTML elemünk attribútumaként adjuk meg.
+Így gyorsan testre tudjuk szabni az elemeket, de nehéz lesz karbantartani a stílusokat, ha valami változik, az összes elemben feül kell írni egyesével.
+Dokumentáció
+https://www.w3schools.com/css/css_howto.asp
+Egy CSS stíluslap elkészítése
+CSS stíluslap
+A CSS stíluslap egy külön fájl, amiben leírhatod az oldal megjelenését.
+Mivel a site builder és a designer legtöbbször nem ugyanaz a személy, így praktikus, ha a stílusok külön fájlokban vannak leírva.
+Dokumentáció
+https://www.w3schools.com/css/css_intro.asp
+A CSS szintaxisa és felépítése
+Egy tipikus CSS direktíva felépítése
+A szelektor mondja meg, hogy melyik elemre legyen a parancs alkalmazva. A deklarációk egy tulajdonság nevéből és az értékéből állnak, pontos vesszővel elválasztva egymástól.
+kép heje
+Képpontok - px
+PX - képpont
+Mivel a monitor képe képpontokból - pixelekből áll össze, kézenfekvő, hogy ebben adjuk meg a dolgok méretét. Viszont gondolni kell arra is, hogy nem minden monitoron, kijelzőn vannak egyforma távolságban egymástól a képpontok.
+A különböző betűtípusok
+A font-family attribútum
+A karakterek megjelenése betűtípus fájlokban van meghatározva. Például ilyenek a .ttf fájlok Windows operációs rendszer esetén.
+Igen ám, de mi van akkor, ha olyan betűtípust szeretnék használni, ami nincs telepítve az adott számítógépen? Ennek a problémának a megoldására van a "fallback system", ami azt jelenti, hogy több betűtípust is megadhatsz felsorolás szerűen, és ha az egyiket nem találja a böngésző, akkor megpóbálkozik a következővel.
+Dokumentáció
+https://www.w3schools.com/cssref/pr_font_font-family.asp
+Saját betűkészletek használata
+@font-face
+Ezzel a CSS utasítással új betűtípust tudsz meghatározni. Meg kell adnod a nevét és a helyet, ahonnak a böngésző be tudja tölteni. Nem fontos, hogy a név egyezzen a betűtípus fájl nevével, érdemes rövidebb, egyszerűbb nevet adni neki.
+Dokumentáció
+https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp
+Szövegformázás
+Szövegek formázása
+font-family: a betűtípus beállítása
+font-style: normal|italic (normál vagy dőlt)
+font-weight: normal|bold vagy 100 - 900-ig számokkal megadva a betűvastagság
+font-size: px|em|rem|vw|% a betűméret megadása
+color: a betűszín
+Dokumentáció
+https://www.w3schools.com/css/css_font.asp
+https://www.w3schools.com/css/css_font_style.asp
+https://www.w3schools.com/css/css_font_size.asp
+Külső betűtípusok használata - Google Fonts
+Google Fonts
+URL: https://fonts.google.com/
+Egy olyan, közel 1000 ingyenes betűtípust tartalmazó válogatás, aminek nagyon könnyű a használata.
+A formázott szöveggel ellátott weboldal bemutatása
+Mivel részfeladatról van szó, itt Kristóf csak Józsival beszéli meg a részleteket.
+2. feladat - A weboldal hátterének és elrendezésének kialakítása
+Sosem könnyű eldönteni, hogyan is nézzen ki egy alkalmazás. Hol van a határ a prakrikusság és a szép megjelenés között?
+Ebben a Story-ban a színekkel, hátterekkel és az elrendezéssel fog trükközni Kristóf barátunk.
+Ismerkedés az id-val
+ID
+Jele a CSS-ben: #
+A HTML szabvány szerint minden elemnek adhatsz egyedi azonosítót az oldalon, ez az ID. Ezt az ID-t a CSS fájlban, amikor kiválasztasz egy elemet, kettőskereszttel jelölheted.
+Ha például az id az, hogy head, akkor a szelektora az lesz a CSS-ben, hogy #head.
+Fontos korlátozás, hogy egy ID-t csak egyszer használhatsz, mert az egyértelműen tartozik egy elemhez.
+Az alábbi animáción követheted, ahogyan ID alapján megformázom a div-eket:
+kép heje
+A HTML elemcsoportok formázása osztályok segítségével
+Class selector
+Jele: .
+Elemek kiválasztása az osztály alapján.
+Nézd meg az alábbi példát, ahol a diveket az osztály alapján választom ki. Mivel mind a kettő ugyanahhoz az osztályhoz tartozik, ha az osztályra adom meg a stílusokat, automatikusan mind a kettő megkapja őket:
+kép heje
+Tartalomtagolás div és span segítségével
+DIV
+A <div> egy osztást (division) hoz létre az oldalon. Blokk szintű elem és alapból nagyon kevés beállítása van, ezért a designerek is szeretnek vele játszani.
+SPAN
+A div-től eltérően nem blokk, hanem inline elem. Leginkább akkor hasznos, ha egy szövegből egy részletet szeretnél másképp megformázni.
+Dokumentáció
+https://www.w3schools.com/tags/tag_div.ASP
+https://www.w3schools.com/tags/tag_span.asp
+A HTML elemek formázása - margin, border, padding
+CSS Box Model - hajtogassunk dobozt
+Az úgynevezett doboz modell azt mutatja meg, hogyan épülnek fel az elemek, és hogyan helyezkednek el egymáshoz képest a böngészőben.
+Margin
+Kívülről befelé haladva az első eleme a box-modelnek a margin. Ez nem része konkrétan az elemnek, ez az elhagyás az elem körül. Magyarul margónak is nevezhetjük. A legtöbb elem rendelkezik alapértelmezett marginnal, ezt tudjuk a saját CSS szabályainkkal felülbírálni.
+Meg lehet adni oldalanként vagy egy utasítással is:
+oldalankénti megadás: margin-top, margin-right, margin-bottom, margin-left
+megadás egyben: margin: top right bottom left
+megadás páronként: margin: top-bottom right-left
+Az alábbi példában néhány elem margin tuladonságát módosítom:
+kép heje
+Border
+A következő a border, vagy szegély. Ha nem adjuk meg, akkor a vastagsága 0px lesz. Az elem méretét növeli a border vastagsága, azaz ha 2px a border, akkor az elem minden irányban 4 pixellel szélesebb lesz.
+Megadása:
+egy utasítással: border: style width color;
+sarkak kerekítése: border-radius: 10px;
+oldalanként: border-left: style width color;
+tulajdonságonként: border-style, border-width, border-color
+A példában egy div elemet formázok:
+kép heje
+Padding
+Itt már az elemen belül járunk, úgy is mondhatnám, hogy átléptük a határt (border). Tehát ez már az elem belső padkája, az elemen belül ennyivel beljebb kezdődik a tartalom. Az elem méretét akkor növeli, ha a box-sizing: border-box; nincs beállítva.
+Megegyezik a margin megadásával, ezért egy példát mutatok inkább:
+kép heje
+Dokumentáció
+Margin
+Border
+Padding
+A HTML elemek formázása - box-shadow
+Box-shadow
+A box-shadow az elemet körülvevő vetett árnyék. A CSS3 hozta be. Az alábbi séma szerint lehet megadni, amit a videóban részletesen elmagyarázok:
+box-shadow: none|h-shadow v-shadow blur spread color|inset|initial|inherit;
+A megértést az alábbi példa is segíti:
+kép heje
+Dokumentáció
+Box shadow
+Relatív mértékegységek használata
+%, em, rem
+%: a méretet a befogadó elem méretének százalékában adja meg.
+em: a betűméret, 1 esetén megegyezik, de például az 1.5 másfélszeres.
+rem: root em, nem a szülő elem em-jét nézi, hanem a <html> elemét.
+Láthatóság és megjelenítés
+Display vs. visibility
+display
+A display tulajdonság az elem megjelenítését befolyásolja. Azt mondja meg, hogy a böngészőnek figyelembe kell-e vennie az elemet az oldal megjelenítésekor, és ha igen, akkor hogyan.
+Használata: display: inline|block|flex|inline-block|none;
+A none érték azt írja elő, hogy nem kell megjeleníteni az elemet. A megjelenített oldalon a böngésző nem foglal helyet az elemnek, ezért a felhasználó nem láthatónak érzékeli.
+visibility
+Ezzel szemben a visibility csak a láthatóságot módosítja. Tehát ha elrejtjük vele az elemet, akkor a helyfoglalás megmarad.
+Használata: visibility: visible|hidden|collapse|initial|inherit;
+A példában mindkettőt megmutatom:
+kép heje
+Dokumentáció
+http://www.w3schools.com/css/css_display_visibility.asp
+Az egyes HTML elemek pozicionálása
+Position - helyezkedjünk kicsit!
+Azt adhatjuk meg vele, hogyan legyen kalkulálva az elem pozíciója.
+position: static; ez az alapértelmezett, a helyzet a többi elemtől függ.
+position: relative; a helyzet a saját normál pozíciótól függ.
+position: fixed; a böngészőablakhoz képest helyezkedik el.
+position: absolute; a helyzet az első nem static elemtől függ.
+Egy jó példa a fentiekre:
+kép heje
+A színek megadásának különböző módjai - RGBA
+RGB (red, green, blue) színmegadás
+A monitor három alapszínből keveri ki az összeset többit.
+Red (vörös), Green (zöld), Blue (kék)
+A színek intenzitását egy 256-os skálán lehet megadni, 0-255-ig. (2 a 8-adikon).
+Összesen 256 * 256 * 256 színnel gazdálkodhatunk, azaz több mint 16 millióval.
+Példul:
+vörös: rgb(255, 0, 0)
+zöld: rgb(0, 255, 0)
+kék: rgb(0, 0, 255)
+sárga: rgb(255, 255, 0)
+fehér: rgb(255, 255, 255)
+fekete:  rgb(0, 0, 0)
+Átlátszóság (alpha csatorna)
+Ha azt szeretnénk, hogy az átlátszóság mértékét is tudjuk állítani a színnel együtt, akkor egy negyedik értéket is megadunk: ez az alpha csatorna, ami 0-1 között lehet. Ekkor rgba lesz a zárójel előtt, például így:
+rgba(255, 128, 44, 0.2)
+Ez csak minimálisan látszik át:
+rgba(255, 128, 44, 0.95)
+Ez pedig egyáltalán nem látszik, tejlesen átlátszó:
+rgba(255, 128, 44, 0)
+Példák
+kép heje
+A színek megadásának különböző módjai - HEX
+Hexadecimal (a 16-os számrendszer szépségei)
+Gyakorlatilag a logikája megegyezik az RGB színmegadással, csak nem tízes, hanem tizenhatos számrendszerben adjuk meg a színek fedettségét. Az öreg rókák szeretik, mert kevesebbet kell írni és ezt szokták meg. :)
+Pár átváltás a kettő között:
+rgb(255, 255, 255) = #FFFFFF fehér
+rgb(66, 134, 244) = #4286f4
+rgb(244, 92, 66) = #f45c42
+rgb(0, 0, 0) = #000000 fekete
+Az alábbi példában a bal oldalt figyeld, látszik a kettő egymás alatt!
+kép heje
+Próbáld ki te is!
+A weboldal hátterének formázása
+Background
+A background az, amivel az oldal vagy bizonyos elemek hátterét tudod formázni.
+Dokumentáció
+https://www.w3schools.com/cssref/css3_pr_background.asp
+A stílusokkal formázott háttér és elrendezés bemutatása
+Ez húzós volt, de Kristóf vette az akadályt.
+Remélem te is jól haladtál!
+3. feladat - A weboldal megjelenésének finomhangolása
+3. feladat - A weboldal megjelenésének finomhangolása
+Az alkalmazás olyan, mint a ház, azt mondják soha sem készül el teljesen.
+Az utolsó fázisban finomhangoljuk a megjelenést és mélyebben megismerkedünk a CSS szelektorokkal.
+A szelektorok vizsgálatának előkészítése
+Ahhoz, hogy tudjuk tesztelni a szelektorokat, előkészítem a HTML forrást.
+A többszörösen egymásbaágyazott szelektorok
+Specify szelektor
+Előfordul, hogy egy szelektorral nem tudod pontosan kijelölni az elemet. Ekkor pontosabban kell rámutatnod az elemre, pontosabban kell specifikálnod. Egyszerre több szelektort használsz, például:
+a.menu-link:hover
+vagy durvábban
+input.form-control[type=email]:focus
+A szelektort egybeírjuk, ha egy elemre vagy elem-csoportra vonatkozik.
+kép heje
+Egymásba ágyazott elemek kiválasztása
+Van, hogy csak egy bizonyos elemen belül szeretnél dolgozni. Ekkor először a szülőt kell megadnod. Például a login azonosítójú formon belüli összes input elem megadása:
+form#login input
+> jel csak a közvetlen gyerekeket jelöli, az unokákat már nem ;)
+form#login > input
+A példában először az egyik, majd a másik formban dolgozom:
+kép heje
+Dokumentáció
+CSS szelektorok
+Az attribútum szelektor
+Attribute szelektor
+Az elemet valamilyen tulajdonsága alapján választja ki. A tulajdonság nevét és értékét egyenlőségjellel elválasztva szögletes zárójelek között adjuk meg. Például:
+[type='button']
+Ha nem adunk meg értéket, akkor azokat az elemeket jelöli ki, ahol a tulajdonság létezik. Például:
+[disabled]
+Jele: [ ]
+Előnye: külön formázást adhatunk meg egy elemnek eltérő tulajdonságok esetén.
+Hátránya: böngésző támogatása nem teljesen egységes.
+kép heje
+Dokumentáció
+CSS: Cascading Style Sheets
+CSS szelektorok
+Szövegek helyettesítése a szelektorokban
+Szövegek helyettesítése CSS szelektorokban
+[attribute^=value]
+Példa: a[href^="https"]
+Kiválasztja az összes olyan elemet, aminek az adott attribútuma a megadott szöveggel kezdődik.
+[attribute$=value]
+Példa: a[href$=".pdf"]
+Kiválasztja az összes olyan elemet, aminek az adott attribútuma a megadott szöveggel végződik.
+[attribute*=value]
+Példa: a[href*="training360"]
+Kiválasztja az összes olyan elemet, aminek az adott attribútuma a megadott szöveget bárhol tartalmazza.
+Dokumentáció
+https://www.w3schools.com/cssref/css_selectors.asp
+Pszeudo szelektorok
+Pseudo szelektorok
+A pseudo szó hamisat jelent. Azért ez a nevük, mert olyan tulajdonságokra vonatkoznak, amelyeket a böngésző automatikusan rendel az elemekhez. Például ha az elem fölé visszük az egeret, vagy kattintottunk már egy linkre. Az eredeti szelektor után kell kettősponttal írni, például:
+a:hover vagy a:visited
+Fontosabb pseudo szelektorok
+:hover - ha az elem fölé viszik az egeret,
+:visited - azok a linkek, amelyekre már kattintottak,
+:active - ha a felhasználó használ egy elemet, mondjuk rákattint,
+:focus - elsősorban input mezőknél, ha éppen használjuk,
+:first-child - a szülő elem első gyereke,
+:last-child - a szülő elem utolsó gyereke,
+:nth-child(n) - az n-edik gyereke a szülő elemnek,
+:empty - olyan elem, aminek nincs gyereke, azaz nem tartalmaz beágyazott elemet,
+:checked - a kiválasztott checkbox,
+:disabled - letiltott elem.
+Az alábbi példában bemutatok néhányat a fentiek közül:
+kép heje
+Dokumentáció
+https://www.w3schools.com/cssref/css_selectors.asp
+A finomhangolt weboldal bemutatása
+Most már kezd egészen elfogadható kinézete lenni az oldalnak.
+A valóságban ebbe a folyamatba be szoktak vonni designereket is, úgy még ennél is jobb lehet a végeredmény.
+A formázott weboldal átadása
+Miután Tamáson is átmennek a módosítások, jöhet az ügyfél általi véleményezés is.
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
